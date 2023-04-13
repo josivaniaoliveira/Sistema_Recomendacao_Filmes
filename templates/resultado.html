@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistema de Recomendação</title>
+  <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="page-header">
+      <h1>{{ titulo }}</h1>
+    </div>
+
+    <div>
+      <h2>Você faz parte do cluster {{resultado}}</h2>
+    </div>
+
+    <div>
+      <h2>E os 10 filmes mais bem avaliados pelos usuários deste cluster são:</h2>
+    </div>
+
+    <div>
+      {{filmes}}
+    </div>
+    <br><br>
+    <div>
+      <a href="/"> Voltar</a>
+    </div>
+
+  </div>
+</body>
+
+</html>

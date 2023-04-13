@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistemas de Recomendação</title>
+  <link rel="stylesheet" href="../static/bootstrap.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>{{ titulo }}</h1>
+    </div>
+    <br>
+    <form action="/predicaoform" method="post">
+      <fieldset>
+        <div>
+          <h1>Informe quais são as caracteriscas que você procura em um filme:</h1>
+        </div>
+        <div class="form-group">
+          <label for="idioma">Escolha um idioma:</label>
+          <select name="idioma" id="idioma">
+            <option value=1 selected>Inglês</option>
+            <option value=2>Francês</option>
+            <option value=3>Espanhol</option>
+            <option value=4>Japonês</option>
+            <option value=5>Italiano</option>
+            <option value=6>Alemão</option>
+            <option value=7>Mandarim</option>
+            <option value=8>Cantonês</option>
+            <option value=9>Russo</option>
+            <option value=10>Sueco</option>
+            <option value=11>Coreano</option>
+            <option value=12>Portugês</option>
+            <option value=13>Polonês</option>
+            <option value=14>Persa</option>
+            <option value=15>Finlandês</option>
+            <option value=16>Holandês</option>
+            <option value=17>Dinamarquês</option>
+            <option value=18>Hindi</option>
+            <option value=19>Tailandês</option>
+            <option value=20>Hebraico</option>
+            <option value=21>Checo</option>
+            <option value=22>Norueguês</option>
+            <option value=23>Servo-Croata</option>
+            <option value=24>Húngaro</option>
+            <option value=25>Nenhum</option>
+            <option value=26>Turco</option>
+            <option value=27>Árabe</option>
+            <option value=28>Romeno</option>
+            <option value=29>Islandês</option>
+            <option value=30>Vietnamita</option>
+            <option value=31>Curdo</option>
+            <option value=32>Hokkien</option>
+            <option value=33>Pashtu</option>
+            <option value=34>Dzongkha</option>
+            <option value=35>Japonês/Inglês</option>
+            <option value=36>Italiano/Inglês</option>
+            <option value=37>Mongol</option>
+            <option value=38>Outros</option>
+            <option value=39>Inuktitut</option>
+            <option value=40>Silencioso</option>
+            <option value=41>Suíço</option>
+            <option value=42>Catalão</option>
+            <option value=43>Tamil</option>
+            <option value=44>Macedônio</option>
+            <option value=45>Grego</option>
+            <option value=46>Taiwanês</option>
+            <option value=47>Wolof</option>
+            <option value=48>Maia</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="categoria1">Escolha a categoria principal de filme:</label>
+          <select name="categoria1" id="categoria1">
+            <option value=1 selected>Comédia</option>
+            <option value=2>Drama</option>
+            <option value=3>Ação</option>
+            <option value=4>Crime</option>
+            <option value=5>Aventura</option>
+            <option value=6>Horror</option>
+            <option value=7>Documentário</option>
+            <option value=8>Para Crianças</option>
+            <option value=9>Animação</option>
+            <option value=10>Suspense</option>
+            <option value=11>Romance</option>
+            <option value=12>Fantasia</option>
+            <option value=13>Mistério</option>
+            <option value=14>Sci-Fi</option>
+            <option value=15>Ocidental</option>
+            <option value=16>Musical</option>
+            <option value=17>Guerra</option>
+            <option value=18>Film-Noir</option>
+            <option value=19>IMAX</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="categoria2">Escolha uma segunda categoria de filme:</label>
+          <select name="categoria2" id="categoria2">
+            <option value=1 selected>Sem uma segunda categoria</option>
+            <option value=2>Drama</option>
+            <option value=3>Romance</option>
+            <option value=4>Thriller</option>
+            <option value=5>Comédia</option>
+            <option value=6>Crime</option>
+            <option value=7>Aventura</option>
+            <option value=8>Horror</option>
+            <option value=9>Sci-Fi</option>
+            <option value=10>Para Crianças</option>
+            <option value=11>Mistério</option>
+            <option value=12>Fantasia</option>
+            <option value=13>Guerra</option>
+            <option value=14>Musical</option>
+            <option value=15>Animação</option>
+            <option value=16>Documentário</option>
+            <option value=17>Ocidental</option>
+            <option value=18>IMAX</option>
+            <option value=19>Film-Noir</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="categoria3">Escolha uma terceira categoria de filme:</label>
+          <select name="categoria3" id="categoria3">
+            <option value=1 selected>Sem uma terceira categoria</option>
+            <option value=2>Thriller</option>
+            <option value=3>Romance</option>
+            <option value=4>Drama</option>
+            <option value=5>Sci-Fi</option>
+            <option value=6>Fantasia</option>
+            <option value=7>Mistério</option>
+            <option value=8>Comédia</option>
+            <option value=9>Para Crianças</option>
+            <option value=10>Guerra</option>
+            <option value=11>Crime</option>
+            <option value=12>Horror</option>
+            <option value=13>Musical</option>
+            <option value=14>Ocidental</option>
+            <option value=15>Animação</option>
+            <option value=16>IMAX</option>
+            <option value=17>Film-Noir</option>
+            <option value=18>Documentário</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="categoria4">Escolha uma quarta categoria de filme:</label>
+          <select name="categoria4" id="categoria4">
+            <option value=1 selected>Sem uma quarta categoria</option>
+            <option value=2>Thriller</option>
+            <option value=3>Romance</option>
+            <option value=4>Sci-Fi</option>
+            <option value=5>Fantasia</option>
+            <option value=6>Comédia</option>
+            <option value=7>Drama</option>
+            <option value=8>Guerra</option>
+            <option value=9>Mistério</option>
+            <option value=10>Musical</option>
+            <option value=11>Ocidental</option>
+            <option value=12>Crime</option>
+            <option value=13>Horror</option>
+            <option value=14>Para Crianças</option>
+            <option value=15>IMAX</option>
+            <option value=16>Film-Noir</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="anoLancamento">Informe um ano de lançamento de filme entre 1970 à 2009:</label>
+          <input type="number" id="anoLancamento" name="anoLancamento" step=1 min="1970" max="2009" value=1995>
+        </div>
+        <button type="submit" class="btn btn-primary btn-salvar">Enviar</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>
