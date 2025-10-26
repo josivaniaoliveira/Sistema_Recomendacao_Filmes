@@ -42,7 +42,7 @@ O sistema utiliza técnicas de **filtragem colaborativa** e/ou **recomendação 
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/josivaniaOS271/ProvaFinal-IIC-JosivaniaOliveira.git
-   cd ProvaFinal-IIC-JosivaniaOliveira
-
+   git clone https://github.com/josivaniaoliveira/Sistema_Recomendacao_Filmes.git
+   cd Sistema_Recomendacao_Filmes
+   
 
